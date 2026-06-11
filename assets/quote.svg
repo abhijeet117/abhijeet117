@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 130" width="1200" height="130" role="img" aria-labelledby="qtitle">
+  <title id="qtitle">One fix was three lines. The other was four hundred and forty-four. The discipline was identical.</title>
+  <defs>
+    <linearGradient id="brandQ" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#58A6FF"/>
+      <stop offset="0.5" stop-color="#BC8CFF"/>
+      <stop offset="1" stop-color="#FF7EE3"/>
+    </linearGradient>
+    <linearGradient id="ruleL" gradientUnits="userSpaceOnUse" x1="16" y1="0" x2="96" y2="0">
+      <stop offset="0" stop-color="#58A6FF" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#58A6FF" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#BC8CFF" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="ruleR" gradientUnits="userSpaceOnUse" x1="1104" y1="0" x2="1184" y2="0">
+      <stop offset="0" stop-color="#BC8CFF" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#FF7EE3" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#FF7EE3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="depth" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#BC8CFF" stop-opacity="0.055"/>
+      <stop offset="1" stop-color="#BC8CFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-400%" width="220%" height="900%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <path id="comma" d="M13.5,0 C20.9,0 26.5,5.7 26.5,13.2 C26.5,31.1 18.9,45.9 4.6,57.4 C3.4,58.4 1.7,58.2 0.8,57 C-0.1,55.9 0,54.3 1,53.3 C9.5,45.2 14.8,36.3 16.6,26.1 C15.6,26.4 14.6,26.5 13.5,26.5 C6.2,26.5 0.6,20.6 0.6,13.2 C0.6,5.7 6.2,0 13.5,0 Z"/>
+    <g id="qpair" fill="url(#brandQ)">
+      <use href="#comma"/>
+      <use href="#comma" transform="translate(33,0)"/>
+    </g>
+    <clipPath id="clipL"><rect x="16" y="58" width="80" height="16"/></clipPath>
+    <clipPath id="clipR"><rect x="1104" y="58" width="80" height="16"/></clipPath>
+  </defs>
+
+  <style>
+    .breathe { animation: breathe 12s ease-in-out infinite; }
+    .shimL { animation: shimL 9s linear infinite; }
+    .shimR { animation: shimR 9s linear infinite; }
+    @keyframes breathe {
+      0%, 100% { opacity: 0.17; }
+      50%      { opacity: 0.27; }
+    }
+    @keyframes shimL {
+      0%   { transform: translateX(0); }
+      46%  { transform: translateX(-110px); }
+      100% { transform: translateX(-110px); }
+    }
+    @keyframes shimR {
+      0%   { transform: translateX(0); }
+      46%  { transform: translateX(110px); }
+      100% { transform: translateX(110px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .breathe { animation: none; opacity: 0.2; }
+      .shimL, .shimR { animation: none; opacity: 0; }
+    }
+  </style>
+
+  <rect width="1200" height="130" fill="#0D1117"/>
+  <ellipse cx="600" cy="65" rx="560" ry="64" fill="url(#depth)"/>
+
+  <g class="breathe" opacity="0.2">
+    <use href="#qpair" transform="translate(165,97) rotate(180) scale(1.18)"/>
+    <use href="#qpair" transform="translate(1035,28.6) scale(1.18)"/>
+  </g>
+
+  <rect x="16" y="65.25" width="80" height="1.5" rx="0.75" fill="url(#ruleL)" filter="url(#soft)" opacity="0.55"/>
+  <rect x="1104" y="65.25" width="80" height="1.5" rx="0.75" fill="url(#ruleR)" filter="url(#soft)" opacity="0.55"/>
+  <rect x="16" y="65.25" width="80" height="1.5" rx="0.75" fill="url(#ruleL)"/>
+  <rect x="1104" y="65.25" width="80" height="1.5" rx="0.75" fill="url(#ruleR)"/>
+
+  <g clip-path="url(#clipL)">
+    <rect class="shimL" x="98" y="64.9" width="26" height="2.2" rx="1.1" fill="url(#shine)" opacity="0.9"/>
+  </g>
+  <g clip-path="url(#clipR)">
+    <rect class="shimR" x="1076" y="64.9" width="26" height="2.2" rx="1.1" fill="url(#shine)" opacity="0.9"/>
+  </g>
+
+  <text x="600" y="73" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="23" fill="#E6EDF3" textLength="980" lengthAdjust="spacingAndGlyphs">One fix was three lines. The other was four hundred and forty-four. The discipline was identical.</text>
+</svg>

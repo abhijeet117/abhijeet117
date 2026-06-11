@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-labelledby="t">
+  <title id="t">openclaw/openclaw PR #3304 - Subprocess hang, fixed in five lines - merged Jan 2026</title>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58A6FF"/>
+      <stop offset="0.5" stop-color="#BC8CFF"/>
+      <stop offset="1" stop-color="#FF7EE3"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <clipPath id="card">
+      <rect x="8.5" y="8.5" width="583" height="283" rx="12"/>
+    </clipPath>
+  </defs>
+  <style>
+    .sans { font-family: 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace; }
+    .sheen { animation: sweep 8s linear infinite; }
+    @keyframes sweep {
+      0%   { transform: translateX(-180px) skewX(-18deg); }
+      28%  { transform: translateX(820px) skewX(-18deg); }
+      100% { transform: translateX(820px) skewX(-18deg); }
+    }
+    .pulse { animation: pulse 3.6s ease-in-out infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.30; }
+      50%      { opacity: 0.65; }
+    }
+    .caret { animation: blink 1s steps(1, end) infinite; }
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+  </style>
+
+  <rect x="0" y="0" width="600" height="300" fill="#0D1117"/>
+  <rect x="8.5" y="8.5" width="583" height="283" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <g clip-path="url(#card)">
+    <rect x="9" y="9" width="582" height="2" fill="url(#accent)" opacity="0.45"/>
+  </g>
+
+  <!-- title bar -->
+  <circle cx="32" cy="33" r="5.5" fill="#F85149"/>
+  <circle cx="52" cy="33" r="5.5" fill="#D29922"/>
+  <circle cx="72" cy="33" r="5.5" fill="#3FB950"/>
+  <text class="mono" x="90" y="37.5" font-size="13" fill="#8B949E">openclaw/openclaw</text>
+  <line x1="9" y1="52" x2="591" y2="52" stroke="#30363D" stroke-width="1" opacity="0.7"/>
+
+  <!-- merged pill -->
+  <rect class="pulse" x="476" y="21" width="92" height="24" rx="12" fill="#A371F7" filter="url(#soft)"/>
+  <rect x="476" y="21" width="92" height="24" rx="12" fill="#A371F7"/>
+  <g transform="translate(490, 27) scale(0.75)" stroke="#FFFFFF" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <circle cx="3.5" cy="3.5" r="2.2"/>
+    <circle cx="3.5" cy="12.5" r="2.2"/>
+    <circle cx="12.5" cy="8" r="2.2"/>
+    <path d="M3.5 5.7 V10.3"/>
+    <path d="M3.5 6.5 C3.7 7.9, 5.6 8, 10.2 8"/>
+  </g>
+  <text class="sans" x="508" y="37" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#FFFFFF">MERGED</text>
+
+  <!-- headline -->
+  <text class="sans" x="32" y="96" font-size="22" font-weight="700" fill="#E6EDF3">Subprocess hang,</text>
+  <text class="sans" x="32" y="124" font-size="22" font-weight="700" fill="#E6EDF3">fixed in five lines</text>
+  <text class="mono" x="32" y="150" font-size="13" fill="#8B949E">stderr pipe deadlock in the run() helper</text>
+  <rect class="caret" x="350" y="139" width="7" height="13" fill="#58A6FF"/>
+
+  <!-- diff hero -->
+  <text class="mono" x="32" y="200" font-size="30" font-weight="700">
+    <tspan fill="#3FB950">+3</tspan><tspan fill="#6E7681"> / </tspan><tspan fill="#F85149">-2</tspan>
+  </text>
+  <text class="sans" x="568" y="198" text-anchor="end" font-size="10" letter-spacing="2.5" fill="#6E7681">BLAST RADIUS</text>
+  <rect x="32" y="212" width="536" height="10" rx="5" fill="#21262D"/>
+  <rect class="seg seg-add" x="32" y="213" width="318" height="8" rx="4" fill="#3FB950"/>
+  <rect class="seg seg-del" x="354" y="213" width="214" height="8" rx="4" fill="#F85149"/>
+
+  <!-- meta row -->
+  <rect x="32" y="250" width="74" height="26" rx="13" fill="#21262D" stroke="#30363D" stroke-width="1"/>
+  <circle cx="48" cy="263" r="4" fill="#F05138"/>
+  <text class="mono" x="58" y="267" font-size="12" fill="#E6EDF3">Swift</text>
+  <text class="sans" x="122" y="267" font-size="12" fill="#8B949E">&#183;  merged Jan 2026</text>
+  <text class="mono" x="568" y="267" text-anchor="end" font-size="13" font-weight="700" fill="url(#accent)">#3304</text>
+
+  <!-- sheen -->
+  <g clip-path="url(#card)">
+    <rect class="sheen" x="0" y="0" width="140" height="300" fill="url(#sheen)"/>
+  </g>
+</svg>

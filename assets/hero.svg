@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Vaishnav Abhijeet · Production Engineer · Full-Stack Developer · Indie Hacker</title>
+  <defs>
+    <radialGradient id="gCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#58A6FF" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#BC8CFF" stop-opacity="0.26"/>
+      <stop offset="45%" stop-color="#BC8CFF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#BC8CFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF7EE3" stop-opacity="0.24"/>
+      <stop offset="45%" stop-color="#FF7EE3" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#FF7EE3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gDeep" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A371F7" stop-opacity="0.20"/>
+      <stop offset="50%" stop-color="#A371F7" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#A371F7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58A6FF"/>
+      <stop offset="50%" stop-color="#BC8CFF"/>
+      <stop offset="100%" stop-color="#FF7EE3"/>
+    </linearGradient>
+    <linearGradient id="sheenG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E6EDF3" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#E6EDF3" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#E6EDF3" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="gridFade" cx="50%" cy="42%" r="78%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#E6EDF3"/>
+    </pattern>
+    <mask id="gridMask">
+      <rect x="0" y="0" width="1200" height="340" fill="url(#gridFade)"/>
+    </mask>
+    <filter id="glowF" x="-30%" y="-100%" width="160%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="b"/>
+      <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.6 0" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <style>
+    .sans { font-family: 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace; }
+    .headline { font-size: 62px; font-weight: 800; letter-spacing: 0.5px; }
+    .role { font-size: 13px; font-weight: 600; }
+    .prompt { font-size: 15px; }
+    .motto { font-size: 18px; }
+    .blob { transform-box: fill-box; transform-origin: center; }
+    .b1 { animation: drift1 26s ease-in-out infinite; }
+    .b2 { animation: drift2 30s ease-in-out infinite; }
+    .b3 { animation: drift3 22s ease-in-out infinite; }
+    .b4 { animation: drift4 28s ease-in-out infinite; }
+    @keyframes drift1 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      33% { transform: translate(70px, 26px) scale(1.12); }
+      66% { transform: translate(-34px, -16px) scale(0.96); }
+    }
+    @keyframes drift2 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-80px, 34px) scale(1.16); }
+    }
+    @keyframes drift3 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(-60px, -30px) scale(1.1); }
+    }
+    @keyframes drift4 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(54px, -22px) scale(1.08); }
+    }
+    .breathe { animation: breathe 24s ease-in-out infinite; }
+    @keyframes breathe {
+      0%, 100% { opacity: 0.85; }
+      50% { opacity: 1; }
+    }
+    .caret {
+      animation: blink 1.2s steps(1, end) infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .sheen { animation: sweep 7s ease-in-out 1s infinite; }
+    @keyframes sweep {
+      0% { transform: translateX(0px); }
+      60% { transform: translateX(1480px); }
+      100% { transform: translateX(1480px); }
+    }
+  </style>
+
+  <rect x="0" y="0" width="1200" height="340" fill="#0D1117"/>
+
+  <g class="breathe">
+    <ellipse class="blob b1" cx="230" cy="90" rx="340" ry="210" fill="url(#gCyan)"/>
+    <ellipse class="blob b2" cx="750" cy="40" rx="360" ry="220" fill="url(#gPurple)"/>
+    <ellipse class="blob b3" cx="1030" cy="250" rx="320" ry="200" fill="url(#gPink)"/>
+    <ellipse class="blob b4" cx="480" cy="330" rx="380" ry="200" fill="url(#gDeep)"/>
+  </g>
+
+  <rect x="0" y="0" width="1200" height="340" fill="url(#dots)" opacity="0.07" mask="url(#gridMask)"/>
+
+  <text class="mono prompt" x="48" y="54">
+    <tspan fill="#3FB950">$</tspan><tspan dx="9" fill="#8B949E">whoami</tspan>
+  </text>
+
+  <text class="sans headline" x="600" y="168" text-anchor="middle" fill="url(#brand)" filter="url(#glowF)">Vaishnav Abhijeet</text>
+
+  <text class="sans role" x="600" y="208" text-anchor="middle" fill="#8B949E" letter-spacing="3">PRODUCTION ENGINEER<tspan fill="#BC8CFF"> · </tspan>FULL-STACK DEVELOPER<tspan fill="#BC8CFF"> · </tspan>INDIE HACKER</text>
+
+  <g>
+    <text class="mono motto" x="500" y="252" fill="#58A6FF">Upgrading Myself,</text>
+    <rect class="caret" x="687.5" y="236" width="11" height="21" rx="1.5" fill="#58A6FF" opacity="0.9"/>
+  </g>
+
+  <rect x="0" y="338" width="1200" height="2" fill="url(#brand)" opacity="0.5"/>
+  <rect class="sheen" x="-280" y="337.5" width="280" height="3" fill="url(#sheenG)"/>
+</svg>

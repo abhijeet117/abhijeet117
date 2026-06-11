@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="190" viewBox="0 0 1200 190" role="img" aria-labelledby="pipelineTitle">
+  <title id="pipelineTitle">How I work: Understand before you change, Scope minimally, Test aggressively, Ship reversibly - keep prod happy</title>
+  <defs>
+    <linearGradient id="brandLine" gradientUnits="userSpaceOnUse" x1="125" y1="0" x2="968" y2="0">
+      <stop offset="0" stop-color="#58A6FF"/>
+      <stop offset="0.5" stop-color="#BC8CFF"/>
+      <stop offset="1" stop-color="#FF7EE3"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#58A6FF"/>
+      <stop offset="0.5" stop-color="#BC8CFF"/>
+      <stop offset="1" stop-color="#FF7EE3"/>
+    </linearGradient>
+    <radialGradient id="auraL" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58A6FF" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="auraR" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FF7EE3" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#FF7EE3" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pillBlur" x="-30%" y="-100%" width="160%" height="300%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="dashBlur" filterUnits="userSpaceOnUse" x="90" y="40" width="920" height="72">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+  </defs>
+  <style>
+    .ring { animation: ringPulse 4.5s ease-in-out infinite; }
+    .p1 { animation-delay: 0.2s; } .p2 { animation-delay: 0.9s; }
+    .p3 { animation-delay: 1.6s; } .p4 { animation-delay: 2.3s; }
+    @keyframes ringPulse { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+    .dash { animation: dashFlow 2.4s linear infinite; }
+    @keyframes dashFlow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -36; } }
+    .pillGlow { animation: pillPulse 3.2s ease-in-out infinite; }
+    @keyframes pillPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.65; } }
+    .dot { animation: dotPulse 2.1s ease-in-out infinite; }
+    @keyframes dotPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    .flame { animation: flameFlick 1.6s ease-in-out infinite; }
+    @keyframes flameFlick { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+    .aurora { animation: drift 26s ease-in-out infinite; }
+    @keyframes drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(26px); } }
+    .lbl { font: 600 15px 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif; fill: #E6EDF3; }
+    .cap { font: 10.5px ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace; fill: #8B949E; }
+    .eyebrow { font: 11px ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace; fill: #6E7681; letter-spacing: 3px; }
+    .pillText { font: 700 13px ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace; fill: #3FB950; letter-spacing: 1.2px; }
+    .icon { fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+
+  <rect width="1200" height="190" fill="#0D1117"/>
+  <g class="aurora">
+    <ellipse cx="300" cy="95" rx="400" ry="130" fill="url(#auraL)"/>
+    <ellipse cx="960" cy="85" rx="340" ry="120" fill="url(#auraR)"/>
+  </g>
+
+  <text class="eyebrow fade" x="24" y="25">// HOW I WORK</text>
+
+  <!-- connector track -->
+  <line x1="125" y1="76" x2="968" y2="76" stroke="#21262D" stroke-width="2"/>
+  <g fill="none" stroke="#3D444D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 242 71.5 L 248 76 L 242 80.5"/>
+    <path d="M 482 71.5 L 488 76 L 482 80.5"/>
+    <path d="M 722 71.5 L 728 76 L 722 80.5"/>
+    <path d="M 903 71.5 L 909 76 L 903 80.5"/>
+  </g>
+  <!-- signature dash-flow -->
+  <line class="dash" x1="125" y1="76" x2="968" y2="76" stroke="url(#brandLine)" stroke-width="6" stroke-linecap="round" stroke-dasharray="8 28" opacity="0.3" filter="url(#dashBlur)"/>
+  <line class="dash" x1="125" y1="76" x2="968" y2="76" stroke="url(#brandLine)" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 28"/>
+
+  <!-- node 1 : Understand -->
+  <g transform="translate(125 76)">
+    <g class="pop d1">
+      <circle class="ring p1" r="34" fill="none" stroke="url(#ringGrad)" stroke-width="1.5"/>
+      <circle r="27" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <g class="icon" stroke="#58A6FF">
+        <circle cx="-2.5" cy="-2.5" r="6.5"/>
+        <line x1="2.2" y1="2.2" x2="8.5" y2="8.5"/>
+      </g>
+      <text class="lbl" y="56" text-anchor="middle">Understand</text>
+      <text class="cap" y="75" text-anchor="middle">before you change</text>
+    </g>
+  </g>
+
+  <!-- node 2 : Scope -->
+  <g transform="translate(365 76)">
+    <g class="pop d2">
+      <circle class="ring p2" r="34" fill="none" stroke="url(#ringGrad)" stroke-width="1.5"/>
+      <circle r="27" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <g class="icon" stroke="#BC8CFF">
+        <circle r="7"/>
+        <line x1="0" y1="-10.5" x2="0" y2="-7"/>
+        <line x1="0" y1="7" x2="0" y2="10.5"/>
+        <line x1="-10.5" y1="0" x2="-7" y2="0"/>
+        <line x1="7" y1="0" x2="10.5" y2="0"/>
+        <circle r="1.6" fill="#BC8CFF" stroke="none"/>
+      </g>
+      <text class="lbl" y="56" text-anchor="middle">Scope</text>
+      <text class="cap" y="75" text-anchor="middle">minimally</text>
+    </g>
+  </g>
+
+  <!-- node 3 : Test -->
+  <g transform="translate(605 76)">
+    <g class="pop d3">
+      <circle class="ring p3" r="34" fill="none" stroke="url(#ringGrad)" stroke-width="1.5"/>
+      <circle r="27" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <g class="icon" stroke="#FF7EE3">
+        <path d="M -2.6 -9 L -2.6 -3.2 L -7.2 6 Q -8.2 9.5 -4.6 9.5 L 4.6 9.5 Q 8.2 9.5 7.2 6 L 2.6 -3.2 L 2.6 -9"/>
+        <line x1="-4.6" y1="-9" x2="4.6" y2="-9"/>
+        <line x1="-5.6" y1="4" x2="5.6" y2="4"/>
+        <circle cx="-1.6" cy="6.4" r="1.1" fill="#FF7EE3" stroke="none"/>
+        <circle cx="2.1" cy="7.2" r="0.8" fill="#FF7EE3" stroke="none"/>
+        <circle cx="0.6" cy="0.4" r="0.8" fill="#FF7EE3" stroke="none" opacity="0.7"/>
+      </g>
+      <text class="lbl" y="56" text-anchor="middle">Test</text>
+      <text class="cap" y="75" text-anchor="middle">aggressively</text>
+    </g>
+  </g>
+
+  <!-- node 4 : Ship -->
+  <g transform="translate(845 76)">
+    <g class="pop d4">
+      <circle class="ring p4" r="34" fill="none" stroke="url(#ringGrad)" stroke-width="1.5"/>
+      <circle r="27" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <g class="icon" stroke="#3FB950">
+        <path d="M 0 -9.5 C 3.4 -6.6 4.3 -1.2 2.7 3.6 L -2.7 3.6 C -4.3 -1.2 -3.4 -6.6 0 -9.5 Z"/>
+        <circle cy="-3.2" r="1.7"/>
+        <path d="M -2.7 0.8 L -5.4 5.2 L -2.7 3.6 Z"/>
+        <path d="M 2.7 0.8 L 5.4 5.2 L 2.7 3.6 Z"/>
+        <path class="flame" d="M -1.4 5.8 L 0 9 L 1.4 5.8"/>
+      </g>
+      <text class="lbl" y="56" text-anchor="middle">Ship</text>
+      <text class="cap" y="75" text-anchor="middle">reversibly</text>
+    </g>
+  </g>
+
+  <!-- pill badge : KEEP PROD HAPPY -->
+  <g transform="translate(1064 76)">
+    <g class="pop d5">
+      <rect class="pillGlow" x="-96" y="-20" width="192" height="40" rx="20" fill="#3FB950" filter="url(#pillBlur)"/>
+      <rect x="-96" y="-20" width="192" height="40" rx="20" fill="#14291F" stroke="#3FB950" stroke-opacity="0.55" stroke-width="1"/>
+      <circle class="dot" cx="-79" cy="0" r="3" fill="#3FB950"/>
+      <text class="pillText" x="7" y="4.5" text-anchor="middle">KEEP PROD HAPPY</text>
+    </g>
+  </g>
+</svg>
